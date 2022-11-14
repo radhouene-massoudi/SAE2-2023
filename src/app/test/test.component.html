@@ -1,0 +1,42 @@
+{{class}}
+<input type="submit" (click)="showMsg()" value="show msg" class="btn btn-danger">
+
+
+
+<div [style.backgroundColor]="kolor">
+msg
+
+</div>
+<input type="text" [(ngModel)]="kolor">
+<div *ngFor="let p of listProdcut ">
+    <div *ngIf="p.quantity!=0">
+    {{p.id}}
+    {{p.title}}
+</div>
+</div>
+-------------------------
+<div *ngFor="let p of listProdcut">
+    
+    {{p.id}}
+    {{p.title}}
+    {{p.quantity}}
+    <input type="submit" value="buy" (click)="decreaseQantity(p)">
+</div>
+-------------------------
+<div *ngFor="let p of listProdcut;let i=index ">
+    <div *ngIf="p.price<search ||search==-1" [ngStyle]="{'backgroundColor':p.quantity==0?'red':'green'}">
+    {{p.id}}
+    {{p.title}}
+    {{p.quantity}}
+    index{{i}}
+    <div *ngIf="p.quantity==0">
+    <input type="submit" value="buy" (click)="decreaseQantity2(i)" [disabled]="true">
+</div>
+<div *ngIf="p.quantity!=0">
+    <input type="submit" value="buy" (click)="decreaseQantity2(i)"[disabled]="false" >
+</div>
+<input type="submit" value="buy" (click)="decreaseQantity2(i)"[disabled]="p.quantity==0" >
+
+</div>
+</div>
+<input type="number" [(ngModel)]="search">
