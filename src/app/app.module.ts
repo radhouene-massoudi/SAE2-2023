@@ -9,6 +9,7 @@ import { ContentComponent } from './content/content.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { NOTFOUNDComponent } from './notfound/notfound.component';
 import { LoginComponent } from './login/login.component';
+import { AddProductComponent } from './core/gestion de produit/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LoginComponent } from './login/login.component';
     ContentComponent,
     AddproductComponent,
     NOTFOUNDComponent,
-    LoginComponent
+    LoginComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,

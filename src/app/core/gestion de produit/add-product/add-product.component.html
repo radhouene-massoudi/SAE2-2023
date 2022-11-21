@@ -1,0 +1,24 @@
+<p>add-product works!</p>
+<form  #f="ngForm">
+    <label>id</label>
+    <input type="number" name="idt" ngModel required min="2" #id="ngModel">
+    <div *ngIf="id.invalid && id.touched">
+        <div *ngIf="id.errors?.['required']">
+            required
+        </div>
+        <div *ngIf="id.errors?.['min']">
+            min
+        </div>
+
+    </div>
+    <label>title</label>
+    <input type="text" name="title" ngModel>
+    <label>quantity</label>
+    <input type="number" name="quantity" ngModel>
+    <label>price</label>
+    <input type="number" name="price" ngModel>
+    <label>like</label>
+    <input type="number" name="like" ngModel >
+    
+    <input type="submit" value="add product" (click)="showForm(id)" >
+</form>
