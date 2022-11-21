@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { ContentComponent } from './content/content.component';
 import { AddProductComponent } from './core/gestion de produit/add-product/add-product.component';
+import { FormProductComponent } from './core/gestion de produit/form-product/form-product.component';
 import { LoginComponent } from './login/login.component';
 import { NOTFOUNDComponent } from './notfound/notfound.component';
 import { TestComponent } from './test/test.component';
@@ -10,7 +11,11 @@ import { TestComponent } from './test/test.component';
 const routes: Routes = [
   {
     path:'',redirectTo:'login',pathMatch:'full'
-  },
+  }
+  ,
+  {
+    path:'form',component:FormProductComponent
+   },
  {
   path:'login',component:LoginComponent
  }

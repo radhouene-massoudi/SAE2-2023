@@ -1,0 +1,29 @@
+
+<form #f="ngForm">
+    <label>id</label>
+    <input type="text" name="id" [(ngModel)]="product.id" required pattern="[0-9]*" #id="ngModel" id="id">
+    <div *ngIf="id.invalid">
+<div *ngIf="id.errors?.['required']">
+    required
+</div>
+<div *ngIf="id.errors?.['pattern']">
+    pattern
+</div>
+    </div>
+    <label>titre</label>
+    <input type="text" name="titre" [(ngModel)]="product.title" required minlength="3" #title="ngModel">
+    <div *ngIf="title.invalid">
+        <div *ngIf="title.errors?.['required']">
+            required
+        </div>
+        <div *ngIf="title.errors?.['minlength']">
+            minlength
+        </div>
+            </div>
+    <label>quantity</label>
+    <input type="number" name="quantity" [(ngModel)]="product.quantity" #q="ngModel">
+  <div *ngIf="q.value<0">
+mlg,lgjfflgjk
+  </div>
+    <input type="submit" value="save" [disabled]="f.invalid">
+</form>
