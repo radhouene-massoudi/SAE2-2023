@@ -25,5 +25,5 @@
   <div *ngIf="q.value<0">
 mlg,lgjfflgjk
   </div>
-    <input type="submit" value="save" [disabled]="f.invalid">
+    <input type="submit" value="save" [disabled]="f.invalid" (click)="saveProduct(f.value)">
 </form>

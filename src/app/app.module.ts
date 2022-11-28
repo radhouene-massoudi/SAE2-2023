@@ -11,7 +11,8 @@ import { NOTFOUNDComponent } from './notfound/notfound.component';
 import { LoginComponent } from './login/login.component';
 import { AddProductComponent } from './core/gestion de produit/add-product/add-product.component';
 import { FormProductComponent } from './core/gestion de produit/form-product/form-product.component';
-
+import { DetailComponent } from './core/gestion de produit/detail/detail.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,12 +23,14 @@ import { FormProductComponent } from './core/gestion de produit/form-product/for
     LoginComponent,
     AddProductComponent,
     FormProductComponent,
+    DetailComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
