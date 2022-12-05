@@ -11,7 +11,7 @@
 </div>
     </div>
     <label>titre</label>
-    <input type="text" name="titre" [(ngModel)]="product.title" required minlength="3" #title="ngModel">
+    <input type="text" name="title" [(ngModel)]="product.title" required minlength="3" #title="ngModel">
     <div *ngIf="title.invalid">
         <div *ngIf="title.errors?.['required']">
             required

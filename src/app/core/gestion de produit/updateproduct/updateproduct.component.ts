@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/model/product';
 import { ProductService } from '../service/product.service';
 
@@ -11,7 +11,9 @@ import { ProductService } from '../service/product.service';
 export class UpdateproductComponent implements OnInit {
 id:any;
 product=new Product();
-  constructor(private s:ProductService,private ac:ActivatedRoute) { }
+  constructor(private s:ProductService,
+    private ac:ActivatedRoute,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.id=this.ac.snapshot.params['idofproducttoupdateit'];
@@ -27,6 +29,7 @@ console.log(this.product)
 update(f:any){
   this.s.updateProduct(this.id,f).subscribe(
 ()=>{
+  this.router.navigate(['list'])
   console.log('updated')
 }
   )

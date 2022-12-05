@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/model/product';
 import { ProductService } from '../service/product.service';
 
@@ -9,14 +10,15 @@ import { ProductService } from '../service/product.service';
 })
 export class FormProductComponent implements OnInit {
   product=new Product();
-  constructor(private service:ProductService) { }
+  constructor(private service:ProductService,private router:Router) { }
 
   ngOnInit(): void {
   }
 saveProduct(f:any){
 this.service.addProduct(f).subscribe(
   (d)=>{
-    console.log('added')
+    this.router.navigate(['list'])
+   // console.log('added')
   },
 (err)=>{
   console.log('tttttttt')
