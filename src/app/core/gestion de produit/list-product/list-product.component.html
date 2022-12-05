@@ -1,0 +1,8 @@
+<div *ngFor="let p of listProduct">
+{{p.id}}
+{{p.titre}}
+{{p.quantity}}
+<a routerLink="/remove/{{p.id}}">remove product</a>
+<a routerLink="/update/{{p.id}}">update product</a>
+</div>
+

@@ -13,6 +13,9 @@ import { AddProductComponent } from './core/gestion de produit/add-product/add-p
 import { FormProductComponent } from './core/gestion de produit/form-product/form-product.component';
 import { DetailComponent } from './core/gestion de produit/detail/detail.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ListProductComponent } from './core/gestion de produit/list-product/list-product.component';
+import { DeleteproductComponent } from './core/gestion de produit/deleteproduct/deleteproduct.component';
+import { UpdateproductComponent } from './core/gestion de produit/updateproduct/updateproduct.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
     AddProductComponent,
     FormProductComponent,
     DetailComponent,
+    ListProductComponent,
+    DeleteproductComponent,
+    UpdateproductComponent,
 
   ],
   imports: [
