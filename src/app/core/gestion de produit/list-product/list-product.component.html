@@ -4,5 +4,8 @@
 {{p.quantity}}
 <a routerLink="/remove/{{p.id}}">remove product</a>
 <a routerLink="/update/{{p.id}}">update product</a>
+<input type="submit" value="update with input" (click)="affectData(p)">
 </div>
-
+<div *ngIf="show">
+<app-update2 [product]="p"></app-update2>
+</div>
